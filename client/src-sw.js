@@ -24,12 +24,6 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-// offlineFallback({
-//   pageFallback: '/offline.html',
-//   imageFallback: '/offline.png',
-//   fontFallback: '/fallback-font.woff2',
-// });
-
 registerRoute(
   ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
   new StaleWhileRevalidate({
