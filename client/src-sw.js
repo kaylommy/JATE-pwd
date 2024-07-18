@@ -24,7 +24,23 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-registerRoute(({ request }) => request.mode === 'navigate', pageCache);
+// offlineFallback({
+//   pageFallback: '/offline.html',
+//   imageFallback: '/offline.png',
+//   fontFallback: '/fallback-font.woff2',
+// });
+
+registerRoute(
+  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+  new StaleWhileRevalidate({
+    cacheName: 'asset-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
+);
 
 // TODO: Implement asset caching
 registerRoute();
