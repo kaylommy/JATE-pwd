@@ -3,7 +3,6 @@
   [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   ## Table of Contents
   - [Deployed Link](#usage)
-  - [License](#license)
   - [Contributors](#contributors)
   
   ## Description
@@ -11,9 +10,6 @@
   
   ## Deployed Link
   https://jate-pwd.onrender.com/
-  
-  ## License
-  “License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. “Licensor” shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.
 
   ## Contributors
   Worked on this assignment with Michael Freeman, Chris Cuellar, and Spencer Klinkowize.
